@@ -12,7 +12,7 @@ import {
     Animated,
     ScrollView, 
     CheckBox, 
-    Image
+    Keyboard
 } from 'react-native';
 
 import logo from '../../images/logo.png';
@@ -51,8 +51,8 @@ export default function Teste(){
             <View >
                 <Logo 
                 style = {{
-                    width: 312,
-                    height: 278
+                    width: 250,
+                    height: 230
                 }}
                 source = {logo}/>                 
             </View> 
@@ -106,7 +106,7 @@ export default function Teste(){
                         
                         <View style = {styles.container}>
                             <View style = {styles.container2}>
-                                <TouchableOpacity style = {styles.buttomEnter}>
+                                <TouchableOpacity style = {styles.buttomLogin}>
                                     <Text style = {styles.textEnter}>Login</Text>
                                 </TouchableOpacity>
                             </View>
@@ -251,7 +251,7 @@ const styles = StyleSheet.create({
       white: {
         backgroundColor: '#FFF',
         width: '90%',
-        height: '70%',
+        height: '75%',
         marginTop: 10,
         padding: 10,
         borderRadius: 8,
@@ -310,7 +310,7 @@ const styles = StyleSheet.create({
         borderRadius: 5, 
         
     },
-    buttomEnter:{
+    buttomLogin:{
         backgroundColor: '#7E191B',
         width: '90%',
         borderRadius: 15,
@@ -320,7 +320,7 @@ const styles = StyleSheet.create({
        
     },
     buttomForgot:{
-        marginTop: '15%',
+        marginTop: '25%',
     },
     buttomSingUp:{
         backgroundColor: '#7E191B',
