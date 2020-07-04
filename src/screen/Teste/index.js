@@ -12,7 +12,7 @@ import {
     Animated,
     ScrollView, 
     CheckBox, 
-    Feather
+    Image
 } from 'react-native';
 
 import logo from '../../images/logo.png';
@@ -100,7 +100,7 @@ export default function Teste(){
                             placeholder = 'Password'
                             autoCorrect = {false} // para nao corrigir nda ao digitar o email
                             onChangeText = { () => {}}
-                            keyboardType ='decimal-pad'
+                            keyboardType ='visible-password'
                             /> 
                         </View>
                         
@@ -174,6 +174,16 @@ export default function Teste(){
                                 <TextInput 
                                 style = {styles.input2}
                                 placeholder = 'Password'
+                                autoCorrect = {false} // para nao corrigir nda ao digitar o email
+                                onChangeText = { () => {}}
+                                keyboardType ='visible-password'
+                                /> 
+                            </View>
+                            <View style = {styles.icons} marginTop = '5%' >
+                                <Icon2 size = {30} name = 'account-key' color = '#000'/>
+                                <TextInput 
+                                style = {styles.input2}
+                                placeholder = 'Confirmation'
                                 autoCorrect = {false} // para nao corrigir nda ao digitar o email
                                 onChangeText = { () => {}}
                                 keyboardType ='visible-password'
