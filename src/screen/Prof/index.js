@@ -10,9 +10,9 @@ export default function Prof(){
     <StatusBar backgroundColor = '#D21F3C' barStyle = 'light-content'/> 
     <SafeAreaView>
       <View>
-        <Image
+        {/* <Image
         source = {require('./src/images')}
-        />
+        /> */}
       </View>
 
     </SafeAreaView>
