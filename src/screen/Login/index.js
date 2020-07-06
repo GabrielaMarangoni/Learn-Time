@@ -10,13 +10,11 @@ import {
     TouchableOpacity, 
     StyleSheet,
     Animated,
+    Image,
+    Keyboard
 } from 'react-native';
 
-import logo from '../../images/logo.png';
 import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons';
-//import Icon from 'react-native-vector-icons/Feather';
-
-import {Logo} from '../../components/styles.js';
 
 export default function Teste(){
 
@@ -38,6 +36,18 @@ export default function Teste(){
     const [optionOne, setOptionOne] = useState(true);
     const [optionTwo, setOptionTwo] = useState(true);
 
+    /* const [logo] = useState(new Animated.ValueXY({x: 250, y:230}));
+    useEffect(() => {
+        keyboardDidShowListener = Keyboard.addListener(' keyboardDidShow',  keyboardDidShow );
+        keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', keyboardDidHide );
+    });
+    function  keyboardDidShow(){
+        alert('mudou')
+    }
+    function keyboardDidHide(){
+        alert('not')
+    } */
+
     const [check, setCheck] = useState(false)
         function handleCheck() {
         setCheck(!check);
@@ -47,14 +57,20 @@ export default function Teste(){
         <StatusBar backgroundColor = '#D21F3C' barStyle = 'light-content'/> 
         <KeyboardAvoidingView style = {styles.background}>
         
-            <View >
+
+            <View style = {styles.img}>
+                <Animated.Image
+                source={require('/Users/maran/LearnTime/src/images/logo.png')}
+                style={{width: 250, height: 230}} />
+            </View>
+            {/* <View >
                 <Logo 
                 style = {{
                     width: 250,
                     height: 230
                 }}
                 source = {logo}/>                 
-            </View> 
+            </View> */} 
             
             <View style={ styles.div }> 
                 <TouchableOpacity style={ optionOne ? styles.active : styles.inative } onPress={() => { 
@@ -73,7 +89,7 @@ export default function Teste(){
             <View>
                 { optionOne ? (
                     <Animated.View style={[
-                        styles.white,
+                        styles.white2,
                         {
                             opacity: opacity,
                             transform: [ 
@@ -252,6 +268,14 @@ const styles = StyleSheet.create({
         flex:1,
         backgroundColor: '#D21F3C'
     },
+    img:{
+        display: 'flex',        
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginTop: 10,
+        borderRadius: 15,
+        padding: 5     
+    },
     div: { 
         display: 'flex', 
         flexDirection: 'row',
@@ -331,6 +355,16 @@ const styles = StyleSheet.create({
         color: 'rgba(0, 0, 0, .2)'
       },
       white: {
+        backgroundColor: '#FFF',
+        width: '90%',
+        height: '75%',
+        marginTop: 10,
+        padding: 10,
+        borderRadius: 8,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+      },
+      white2: {
         backgroundColor: '#FFF',
         width: '90%',
         height: '75%',
